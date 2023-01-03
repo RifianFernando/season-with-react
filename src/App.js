@@ -13,23 +13,23 @@ import logo from './assets/Frame.svg'
 
 function App(){
     return(
-        <Router>
+        // <Router>
             <nav>
-                <Link to={'/'}>Home</Link>
-                <Link to={'/about'}>About</Link>
-                <Link to={'/profile'}>
-                    <Button to={'http/profile'} btnsize={'large'}>
-                        <p style={{fontSize: '10px'}}>profile</p>
-                    </Button>
-                </Link>
+                {/* <Link to={'/'}>Home</Link>
+                <Link to={'/about'}>About</Link> */}
+                <a href='/profile'>Home</a>
+                <a>About</a>
+                <Button link={'/profile'} element={<Profile/>}>
+                    <p style={{fontSize: '10px'}}>profile</p>
+                </Button>
             </nav>
-            <Routes>
+            /* <Routes>
                 <Route path='/' element={<Home/>} />
                 <Route path='/about' element={<About/>} />
                 <Route path='/profile' element={<Profile/>} />
                 <Route path='*' element={<ErrorPage/>} />
             </Routes>
-        </Router>
+        </Router> */
     );
 };
 
