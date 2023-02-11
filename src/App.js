@@ -10,7 +10,6 @@ import Profile from './Pages/Profile';
 import ErrorPage from './Pages/ErrorPage';
 import Route from "./Pages/Route"
 import Header from './Pages/Header';
-import {Button} from 'technotic'
 import logo from './assets/Frame.svg'
 
 function App(){
