@@ -1,16 +1,15 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
+// import { Button } from 'technotic';
 
 function Profile() {
     // let navigate = useNavigate();
   return (
     <div>
       This is the profile page
-      {/* <button onClick={() => {
-        navigate('https://www.youtube.com/watch?v=UjHT_NKR_gU')
-      }}>
-        About Page
-      </button> */}
+      {/* <Button link={'/profile'} element={<Profile/>}>
+                    <p style={{fontSize: '15px'}}>profile</p>
+                </Button> */}
     </div>
   )
 }

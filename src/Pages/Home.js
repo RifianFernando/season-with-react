@@ -1,9 +1,13 @@
 import React from 'react'
+import { Radio as RadioPalsu} from 'technotic';
+import { Radio } from 'antd';
 
 function Home() {
   return (
     <div>
-      This is a home component
+      <Radio>Test</Radio>
+      <Radio>Something 2</Radio>
+      {/* <RadioPalsu>test</RadioPalsu> */}
     </div>
   )
 }
