@@ -1,6 +1,6 @@
 import {
-    BrowserRouter as Router, 
-    Routes, 
+    BrowserRouter as Router,
+    Routes,
     Route,
     Link
 } from 'react-router-dom'
@@ -13,26 +13,26 @@ import ErrorPage from './Pages/ErrorPage';
 // import { Button } from 'technotic';
 
 
-function App(){
-    return(
+function App() {
+    return (
         <div>
-        <Router>
-            <nav>
-                <Link to={'/'}>Home</Link>
-                <Link to={'/about'}>About</Link>
-                <Link to={'/profile'}>Profile</Link>
-                {/* <Button link={'/profile'} element={<Profile/>}>
+            <Router>
+                <nav>
+                    <Link style={{ 'color': 'black' }} to={'/'}>Home</Link>
+                    <Link style={{ 'color': 'black' }} to={'/about'}>About</Link>
+                    <Link style={{ 'color': 'black' }} to={'/profile'}>Profile</Link>
+                    {/* <Button link={'/profile'} element={<Profile/>}>
                     <p style={{fontSize: '15px'}}>profile</p>
                 </Button> */}
-                {/* <Header/> */}
-            </nav>
-            <Routes>
-                <Route path='/' element={<Home/>} />
-                <Route path='/about' element={<About/>} />
-                <Route path='/profile' element={<Profile/>} />
-                <Route path='*' element={<ErrorPage/>} />
-            </Routes>
-        </Router>
+                    {/* <Header/> */}
+                </nav>
+                <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/about' element={<About />} />
+                    <Route path='/profile' element={<Profile />} />
+                    <Route path='*' element={<ErrorPage />} />
+                </Routes>
+            </Router>
         </div>
     );
 };
