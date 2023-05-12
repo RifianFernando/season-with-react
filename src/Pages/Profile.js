@@ -1,14 +1,14 @@
 import React from 'react'
 // import { useNavigate } from 'react-router-dom'
 import { Button } from 'technotic';
+import Home from './Home';
 
 function Profile() {
-    // let navigate = useNavigate();
     return (
         <div>
             This is the profile page
-            <Button link={'/profile'} element={<Profile />}>
-                <p style={{ fontSize: '15px' }}>profile</p>
+            <Button btnType={'primary'} link={'/'} element={<home/>}>
+                <p style={{ fontSize: '15px' }}>Home Profile</p>
             </Button>
         </div>
     )
