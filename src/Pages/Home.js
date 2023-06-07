@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Radio as RadioPalsu } from 'technotic';
+import { Input } from 'technotic';
 import { Radio } from 'antd';
 
 
@@ -72,6 +72,10 @@ function Home() {
                 optionType="button"
                 buttonStyle="solid"
             />
+
+            <Input.Radio>
+                Radio 1
+            </Input.Radio>
         </div>
     )
 }
