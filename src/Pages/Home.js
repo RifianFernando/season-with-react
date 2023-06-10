@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Input } from 'technotic';
+import React, { useState } from 'react';
+import { Input } from 'technotic'
 import { Radio } from 'antd';
 
 
@@ -49,12 +49,10 @@ function Home() {
 
     return (
         <div>
-            <Radio>Test</Radio>
-            <Radio>Something 2</Radio>
-
-            {/* <RadioPalsu>
-            test
-        </RadioPalsu> */}
+            {/* <Radio></Radio>
+            <Button>
+                test
+            </Button>
 
 
             <Radio.Group options={plainOptions} onChange={onChange1} value={value1} />
@@ -71,10 +69,18 @@ function Home() {
                 value={value4}
                 optionType="button"
                 buttonStyle="solid"
-            />
+            /> */}
+            {/* <Radio optionType="button">Something 2</Radio> */}
 
-            <Input.Radio>
-                Radio 1
+            {/* <Radio>
+                Test asdfas
+            </Radio> */}
+            <Radio.Group options={plainOptions} onChange={onChange1} value={value1} />
+            <br />
+            <Input.Radio
+                defaultChecked={true}
+            >
+                Test asdfas
             </Input.Radio>
         </div>
     )
