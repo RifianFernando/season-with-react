@@ -28,8 +28,8 @@ function Home() {
     const [value4, setValue4] = useState('Apple');
 
     const onChange1 = ({ target: { value } }) => {
-        console.log('radio1 checked', value);
         setValue1(value);
+        console.log('radio1 checked', value);
     };
 
     const onChange2 = ({ target: { value } }) => {
@@ -78,7 +78,10 @@ function Home() {
             <Radio.Group options={plainOptions} onChange={onChange1} value={value1} />
             <br />
             <Input.Radio
-                defaultChecked={true}
+                radioType="secondary"
+                // defaultChecked={true}
+                onChange={handleRadioChange}
+                onClick={handleRadioClick}
             >
                 Test asdfas
             </Input.Radio>
