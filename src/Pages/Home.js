@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Input, Button } from 'technotic'
 import { Radio } from 'antd';
-
+import { Input } from 'technotic';
 
 const plainOptions = [
     'Apple',
@@ -59,21 +58,19 @@ function Home() {
     const handleInputChange = (e) => {
         setSelectedOption(e.target.value);
     };
+    const [text, setText] = useState("radio");
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const inputValue = e.target.elements.inputField.value;
-        const selectedOption = e.target.elements.radioGroup.value;
+        const selectedOption = document.querySelector('input[name="radioGroup"]:checked').value;
         console.log('Text Input Value:', inputValue);
         console.log('Selected Radio Button Value:', selectedOption);
         console.log('Submit');
     };
     return (
         <div>
-            {/* <Radio></Radio>
-            <Button>
-                test
-            </Button>
+            <Radio></Radio>
 
 
             <Radio.Group options={plainOptions} onChange={onChange1} value={value1} />
@@ -90,7 +87,7 @@ function Home() {
                 value={value4}
                 optionType="button"
                 buttonStyle="solid"
-            /> */}
+            />
             {/* <Radio optionType="button">Something 2</Radio> */}
 
             {/* <Radio>
@@ -115,19 +112,10 @@ function Home() {
 
             <form onSubmit={handleSubmit}>
                 <input type="text" name="inputField" />
-
-                <Input.Radio
-                    value='test'
-                    name='radioGroup'
-                >
+                <Input.Radio name="radioGroup" value={'2'}>
                     Test asdfas
                 </Input.Radio>
 
-                {/* <Radio
-                    value='test'
-                    name='radioGroup'>
-                    Test ant design
-                </Radio> */}
 
                 <button type="submit">Submit</button>
             </form>
