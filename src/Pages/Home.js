@@ -46,19 +46,7 @@ function Home() {
         setValue4(value);
     };
 
-    // const SubmitForm = (e) => {
-    //     e.preventDefault();
-    //     const inputValue = e.target.elements.inputField.value;
-    //     console.log('Input value:', inputValue);
-    //     console.log('submit');
-    // }
-
     const [selectedOption, setSelectedOption] = useState('');
-
-    const handleInputChange = (e) => {
-        setSelectedOption(e.target.value);
-    };
-    const [text, setText] = useState("radio");
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -68,57 +56,24 @@ function Home() {
         console.log('Selected Radio Button Value:', selectedOption);
         console.log('Submit');
     };
+
     return (
         <div>
-            <Radio></Radio>
 
 
-            <Radio.Group options={plainOptions} onChange={onChange1} value={value1} />
+            {/* <Radio.Group options={plainOptions} onChange={onChange1} value={value1} /> */}
             <br />
-            <Radio.Group options={optionsWithDisabled} onChange={onChange2} value={value2} />
-            <br />
-            <br />
-            <Radio.Group options={options} onChange={onChange3} value={value3} optionType="button" />
-            <br />
-            <br />
-            <Radio.Group
-                options={optionsWithDisabled}
-                onChange={onChange4}
-                value={value4}
-                optionType="button"
-                buttonStyle="solid"
-            />
-            {/* <Radio optionType="button">Something 2</Radio> */}
-
-            {/* <Radio>
-                Test asdfas
-            </Radio> */}
-
-
-            {/* <form onSubmit={SubmitForm}>
-                <input type='text' />
-                <Input.Radio
-                    value='test'
-                >
-                    Test asdfas
-                </Input.Radio>
-
-                <input type='radio' value={'1'} />
-
-                <Button type="submit">
-                    Submit
-                </Button>
-            </form> */}
-
             <form onSubmit={handleSubmit}>
                 <input type="text" name="inputField" />
-                <Input.Radio name="radioGroup" value={'2'}>
-                    Test asdfas
-                </Input.Radio>
+                {/* <Input.Radio name="radioGroup" value={'3'}>Test asdfas</Input.Radio> */}
+                <Input.RadioList name="radioGroup" options={options} />
+                <Input.Radio name="radioGroup1" value={'3'}>Test asdfas</Input.Radio>
 
 
                 <button type="submit">Submit</button>
             </form>
+
+            <br />
         </div>
     )
 }
