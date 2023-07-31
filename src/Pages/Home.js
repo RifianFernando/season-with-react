@@ -19,7 +19,7 @@ function Home() {
     // uncheck Radio 
     const [value5, setValue5] = useState(false);
     const onChange5 = (e) => {
-        console.log('radio 4 checked', value4);
+        console.log('radio 4 checked', value5);
         setValue5(!value5);
     };
     /////////////////////////////
@@ -30,8 +30,15 @@ function Home() {
     };
     /////////////////////////////
 
-    const [value4, setValue4] = useState('');
-    const onChange4 = ({ target: { value } }) => {
+    // get onChange from radio design system 
+    const [value7, setValue7] = useState('apple');
+    const onChange7 = (value) => {
+        console.log('radio 7 checked', value);
+        setValue4(value);
+    };
+
+    const [value4, setValue4] = useState('apple');
+    const onChange4 = (value) => {
         console.log('radio 4 checked', value);
         setValue4(value);
     };
@@ -45,7 +52,7 @@ function Home() {
 
             {/* uncheck Radio */}
             <Input.Radio
-                name="radioGroup1"
+                name="radio1"
                 onChange={onChange5}
                 checked={value5}
                 onClick={onChange5}
@@ -62,7 +69,6 @@ function Home() {
             <Input.Radio
                 name="radio1"
                 onChange={onChange6}
-                // onClick={onChange6}
                 value={'appye pie'}
                 radioType="secondary"
             >
@@ -74,6 +80,19 @@ function Home() {
             <br />
             <br />
 
+            {/* Get value from onChange Radio */}
+            <Input.RadioList
+                name="radioGroup1"
+                options={options}
+                onChange={onChange7}
+                direction="vertical"
+            >
+            </Input.RadioList>
+            {/* end.... */}
+
+            <br />
+            <br />
+            <br />
 
             <form onSubmit={handleSubmit}>
                 {/* <input type="text" name="inputField" /> */}
@@ -83,7 +102,8 @@ function Home() {
                     options={options}
                     onChange={onChange4}
                     direction="vertical"
-                    value={value4}
+                    radioType="secondary"
+                    // value={value4}
                 >
                 </Input.RadioList>
 
@@ -91,8 +111,17 @@ function Home() {
                     name="radioGroup"
                     options={options}
                     // onChange={onChange4}
-                    value={value4}
-                />
+                    // value={value4}
+                />            {/* uncheck Radio */}
+                <Input.Radio
+                    name="radioGroup"
+                    onChange={onChange5}
+                    checked={value5}
+                    onClick={onChange5}
+                >
+                    unhceck radio
+                </Input.Radio>
+                {/* end.... */}
 
 
                 <button type="submit">Submit</button>
